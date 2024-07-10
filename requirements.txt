@@ -64,7 +64,6 @@ paramiko==3.0.0
 pbr==5.11.1
 pillow==10.3.0
 protobuf==4.25.3
-psycopg2==2.9.9
 pyarrow==14.0.1
 pyasn1==0.6.0
 pycparser==2.21
