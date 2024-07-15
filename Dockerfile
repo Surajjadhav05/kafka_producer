@@ -11,7 +11,7 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 
 # This tells Docker to listen on port 80 at runtime. Port 80 is the standard port for HTTP.
-EXPOSE 82
+EXPOSE 8082
 
 # This sets the default command for the container to run the app with Streamlit.
 ENTRYPOINT ["streamlit", "run"]
