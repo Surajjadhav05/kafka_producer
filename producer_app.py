@@ -51,7 +51,9 @@ lottie_animation = load_lottiefile(lottie_file)
 Producer=connect_to_producer()
 
 
-st.title("Upload,Clean and Stream Data")
+st.title("Kafka Data Streamming")
+st.write("This application will stream data using kafka producer to mimic near-realtime scenario!")
+
 with st_lottie_spinner(lottie_animation, height=200, key="loading_animation"):
     time.sleep(2)
     uploaded_file=st.file_uploader("Choose a JSONL file", type="jsonl")
