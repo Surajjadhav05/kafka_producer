@@ -10,8 +10,8 @@ WORKDIR /app
 # This runs pip install for all the packages listed in your requirements.txt file.
 RUN pip install -r requirements.txt
 
-# This tells Docker to listen on port 8502at runtime. 8502 is the standard port for HTTP.
-EXPOSE 8502
+# This tells Docker to listen on port 8401 at runtime. 8401 is the standard port for HTTP.
+EXPOSE 8401
 
 # This sets the default command for the container to run the app with Streamlit.
 ENTRYPOINT ["streamlit", "run"]
