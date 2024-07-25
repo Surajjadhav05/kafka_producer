@@ -7,7 +7,7 @@ import json
     
 def clean_data(data):
     df=pd.DataFrame(data)
-    df.is_fraud=-1
+    df.is_fraud=-2
     df.transaction_datetime=pd.to_datetime(df.transaction_datetime)
     df.sort_values(by=["transaction_datetime"],axis=0,inplace=True)
     df=df[['ssn', 'cc_num', 'first', 'last', 'gender','lat', 'long', 'city_pop', 'job', 'dob', 'acct_num',

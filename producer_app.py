@@ -63,8 +63,18 @@ if uploaded_file is not None:
     try:
         df = pd.read_json(uploaded_file, lines=True)
         df=clean_data(df)
-        st.subheader("Uploaded Data!")
-        st.table(df.head())
+        df_style=df[:5]
+        df_style = df_style.style.set_table_styles(
+            [{
+                'selector': 'th',
+                'props': [('max-width', '150px'), ('width', '150px')]
+            }, {
+                'selector': 'td',
+                'props': [('max-width', '150px'), ('width', '150px')]
+            }]
+        )
+        st.subheader("Sample Uploaded Data!")
+        st.dataframe(df_style)
         streaming=st.button("Start streaming!")
         
     except Exception as e:
